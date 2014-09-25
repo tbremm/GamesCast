@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="button_GamesMenuSelected">My Games</string>
+    <string name="button_game_1">Trivial Pursuit</string>
+    <string name="button_game_2">Poker</string>
+    <string name="button_game_3">Risk</string>
+    <string name="game_1_background">Game 1 background image</string>
+</resources>

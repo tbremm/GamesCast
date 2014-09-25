@@ -4,5 +4,15 @@
     <string name="app_name">GamesCast</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="button_GamesMenuSelected">My Games</string>
+    <string name="game_1">Trivia</string>
+    <string name="game_2">Poker</string>
+    <string name="game_3">Sorry!</string>
+    <string name="game_4">Trouble</string>
+    <string name="game_5">Risk</string>
+    <string name="button_game_1">Trivial Pursuit</string>
+    <string name="button_game_2">Poker</string>
+    <string name="button_game_3">Risk</string>
+    <string name="game_1_background">Game 1 background image</string>
 
 </resources>
