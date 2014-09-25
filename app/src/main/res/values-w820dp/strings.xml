@@ -5,4 +5,5 @@
     <string name="button_game_2">Poker</string>
     <string name="button_game_3">Risk</string>
     <string name="game_1_background">Game 1 background image</string>
+    <string name="action_cast">Cast</string>
 </resources>

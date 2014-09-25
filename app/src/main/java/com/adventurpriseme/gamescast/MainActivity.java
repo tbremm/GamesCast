@@ -1,6 +1,7 @@
 package com.adventurpriseme.gamescast;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -29,12 +30,36 @@ public class MainActivity extends Activity {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        return id == R.id.action_settings || super.onOptionsItemSelected(item);
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+                openSettings();
+                return true;
+            case R.id.action_cast:
+                onCast();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    // ChromeCast button handler
+    private void onCast() {
+        doCast ();
+    }
+
+
+    // Entry point for ChromeCastActivity
+    private void doCast() {
+        // FIXME: Go into chromecast activity
+        setContentView(R.layout.activity_game1);
+    }
+
+    private void openSettings() {
     }
 
     public void onGamesMenuSelected (View view) {
-        setContentView(R.layout.activity_gamesmenu);
+        Intent intent = new Intent(this, GameListActivity.class);
+        startActivity (intent);
     }
 
     public void on_game_1(View view) {
