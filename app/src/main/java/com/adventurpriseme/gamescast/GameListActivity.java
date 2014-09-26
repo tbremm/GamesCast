@@ -37,7 +37,9 @@ public class GameListActivity extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_list);
         // Show the Up button in the action bar.
-        getActionBar().setDisplayHomeAsUpEnabled(true);
+        if(getActionBar() != null) {
+            getActionBar().setDisplayHomeAsUpEnabled(true);
+        }
 
         if (findViewById(R.id.game_detail_container) != null) {
             // The detail container view will be present only in the

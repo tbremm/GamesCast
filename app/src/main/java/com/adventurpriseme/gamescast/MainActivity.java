@@ -3,19 +3,43 @@ package com.adventurpriseme.gamescast;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.media.MediaRouteSelector;
+import android.support.v7.media.MediaRouter;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.google.android.gms.cast.CastMediaControlIntent;
+
 
 public class MainActivity extends Activity {
+
+    // Objects required for casting, must exist for lifetime of app
+    public static MediaRouter mMediaRouter;
+    public static MediaRouteSelector mMediaRouteSelector;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        getActionBar().setDisplayHomeAsUpEnabled(true);
+        InitCasting ();
+
+        if (getActionBar() != null){
+            getActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+    }
+
+    // Initialize objects needed for casting
+    private void InitCasting() {
+        // Get an instance of the MediaRouter (CC device)
+        // We need to hold on to this instance for the lifetime of the sender app
+        MainActivity.mMediaRouter = MediaRouter.getInstance(getApplicationContext());
+
+        // This is used to filter discovery for Cast devices that can launch the associated receiver app
+        mMediaRouteSelector = new MediaRouteSelector.Builder()
+            .addControlCategory(CastMediaControlIntent.categoryForCast("21857AF0"))
+                .build();
     }
 
     @Override
@@ -47,11 +71,10 @@ public class MainActivity extends Activity {
         doCast ();
     }
 
-
     // Entry point for ChromeCastActivity
     private void doCast() {
-        // FIXME: Go into chromecast activity
-        setContentView(R.layout.activity_game1);
+        Intent intent = new Intent(this, ChromeCastActivity.class);
+        startActivity (intent);
     }
 
     private void openSettings() {

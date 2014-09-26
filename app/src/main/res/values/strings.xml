@@ -18,5 +18,6 @@
     <string name="title_game_detail">Game Detail</string>
     <string name="title_activity_chrome_cast">ChromeCastActivity</string>
     <string name="action_cast">Cast</string>
+    <string name="media_route_menu_title">Where would you like to play?</string>
 
 </resources>
