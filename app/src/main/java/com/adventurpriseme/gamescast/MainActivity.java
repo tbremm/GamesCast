@@ -75,6 +75,8 @@ public class MainActivity extends Activity {
     private void doCast() {
         Intent intent = new Intent(this, ChromeCastActivity.class);
         startActivity (intent);
+        //Intent intent = new Intent(this, CastHelloWorld.class);
+        //startActivity (intent);
     }
 
     private void openSettings() {
@@ -86,7 +88,6 @@ public class MainActivity extends Activity {
     }
 
     public void on_game_1(View view) {
-        setContentView(R.layout.activity_game1);
     }
 
     public void on_game_2(View view) {

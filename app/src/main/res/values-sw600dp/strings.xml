@@ -2,4 +2,8 @@
 <resources>
     <string name="action_cast">Cast</string>
     <string name="media_route_menu_title">Where would you like to play?</string>
+    <string name="app_id">21857AF0</string>
+    <string name="message_to_cast">tbHelloWorld!</string>
+    <string name="instructions">These are test instructions...</string>
+    <string name="namespace">com.adventurpriseme.gamescast.castHelloWorld</string>
 </resources>

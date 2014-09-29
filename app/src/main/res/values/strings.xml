@@ -18,8 +18,7 @@
     <string name="title_game_detail">Game Detail</string>
     <string name="title_activity_chrome_cast">ChromeCastActivity</string>
     <string name="action_cast">Cast</string>
-    <string name="media_route_menu_title">Where would you like to play&#8230;</string>
-
+    <string name="media_route_menu_title">Where would you like to play…</string>
     <string name="tie">Tied game! No one wins!</string>
     <string name="player_turn">It is player <b>%s</b>\'s turn.</string>
     <string name="player_wins">Player %s wins!</string>
@@ -36,5 +35,10 @@
     <string name="game_over">Game Over</string>
     <string name="select_device_text">Select device to start the game.</string>
     <string name="join_game">Join the Game</string>
+    <string name="title_activity_cast_hello_world">CastHelloWorld</string>
+    <string name="app_id">21857AF0</string>
+    <string name="message_to_cast">tbHelloWorld!</string>
+    <string name="instructions">These are test instructions...</string>
+    <string name="namespace">com.adventurpriseme.gamescast.castHelloWorld</string>
 
 </resources>

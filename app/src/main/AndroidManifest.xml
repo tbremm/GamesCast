@@ -2,13 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.adventurpriseme.gamescast" >
 
-
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/Theme.AppCompat" >
-
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
@@ -22,7 +20,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".GameListActivity"
             android:label="@string/title_game_list"
@@ -31,7 +28,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.adventurpriseme.gamescast.MainActivity" />
         </activity>
-
         <activity
             android:name=".GameDetailActivity"
             android:label="@string/title_game_detail"
@@ -40,18 +36,24 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.adventurpriseme.gamescast.GameListActivity" />
         </activity>
-
         <activity
             android:name=".ChromeCastActivity"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_chrome_cast"
-            android:screenOrientation="portrait"
-            android:parentActivityName=".MainActivity" >
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.adventurpriseme.gamescast.MainActivity" />
         </activity>
-
+        <activity
+            android:name=".CastHelloWorld"
+            android:label="@string/title_activity_cast_hello_world"
+            android:parentActivityName=".GameListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.adventurpriseme.gamescast.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
