@@ -14,7 +14,7 @@ import com.adventurpriseme.gamescast.dummy.DummyContent;
  * A list fragment representing a list of Games. This fragment
  * also supports tablet devices by allowing list items to be given an
  * 'activated' state upon selection. This helps indicate which item is
- * currently being viewed in a {@link GameDetailFragment}.
+ * currently being viewed in a {@link GameDetailTitleFragment}.
  * <p>
  * Activities containing this fragment MUST implement the {@link Callbacks}
  * interface.

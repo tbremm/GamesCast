@@ -6,6 +6,8 @@ import android.app.Activity;
 import android.support.v4.app.NavUtils;
 import android.view.MenuItem;
 
+import com.adventurpriseme.gamescast.dummy.DummyContent;
+
 
 /**
  * An activity representing a list of Games. This activity
@@ -17,7 +19,7 @@ import android.view.MenuItem;
  * <p>
  * The activity makes heavy use of fragments. The list of items is a
  * {@link GameListFragment} and the item details
- * (if present) is a {@link GameDetailFragment}.
+ * (if present) is a {@link GameDetailTitleFragment}.
  * <p>
  * This activity also implements the required
  * {@link GameListFragment.Callbacks} interface
@@ -32,6 +34,9 @@ public class GameListActivity extends Activity
      */
     private boolean mTwoPane;
 
+
+    private DummyContent.DummyItem mItem;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +46,7 @@ public class GameListActivity extends Activity
             getActionBar().setDisplayHomeAsUpEnabled(true);
         }
 
-        if (findViewById(R.id.game_detail_container) != null) {
+        if (findViewById(R.id.game_detail_container_title) != null) {
             // The detail container view will be present only in the
             // large-screen layouts (res/values-large and
             // res/values-sw600dp). If this view is present, then the
@@ -86,18 +91,22 @@ public class GameListActivity extends Activity
             // adding or replacing the detail fragment using a
             // fragment transaction.
             Bundle arguments = new Bundle();
-            arguments.putString(GameDetailFragment.ARG_ITEM_ID, id);
-            GameDetailFragment fragment = new GameDetailFragment();
-            fragment.setArguments(arguments);
-            getFragmentManager().beginTransaction()
-                    .replace(R.id.game_detail_container, fragment)
-                    .commit();
+            // fixme two pane now broken
+            //arguments.putString(GameDetailTitleFragment.ARG_ITEM_ID, id);
+            //GameDetailTitleFragment fragment = new GameDetailTitleFragment();
+            //fragment.setArguments(arguments);
+            //getFragmentManager().beginTransaction()
+            //        .replace(R.id.game_detail_container_title, fragment)
+            //        .commit();
 
         } else {
             // In single-pane mode, simply start the detail activity
             // for the selected item ID.
             Intent detailIntent = new Intent(this, GameDetailActivity.class);
-            detailIntent.putExtra(GameDetailFragment.ARG_ITEM_ID, id);
+            DummyContent.DummyItem mItem;
+
+            mItem = DummyContent.ITEM_MAP.get(id);
+            detailIntent.putExtra("Title", mItem.content);
             startActivity(detailIntent);
         }
     }

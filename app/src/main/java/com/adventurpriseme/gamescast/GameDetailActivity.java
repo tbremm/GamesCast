@@ -1,10 +1,14 @@
 package com.adventurpriseme.gamescast;
 
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
 import android.support.v4.app.NavUtils;
 import android.view.MenuItem;
+import android.widget.TextView;
+
+import com.adventurpriseme.gamescast.dummy.DummyContent;
 
 
 /**
@@ -14,9 +18,12 @@ import android.view.MenuItem;
  * in a {@link GameListActivity}.
  * <p>
  * This activity is mostly just a 'shell' activity containing nothing
- * more than a {@link GameDetailFragment}.
+ * more than a {@link GameDetailTitleFragment}.
  */
 public class GameDetailActivity extends Activity {
+
+
+    public static final String ARG_ITEM_ID = "item_id";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,13 +46,34 @@ public class GameDetailActivity extends Activity {
             // Create the detail fragment and add it to the activity
             // using a fragment transaction.
             Bundle arguments = new Bundle();
-            arguments.putString(GameDetailFragment.ARG_ITEM_ID,
-                    getIntent().getStringExtra(GameDetailFragment.ARG_ITEM_ID));
-            GameDetailFragment fragment = new GameDetailFragment();
-            fragment.setArguments(arguments);
-            getFragmentManager().beginTransaction()
-                    .add(R.id.game_detail_container, fragment)
-                    .commit();
+            arguments.putString(this.ARG_ITEM_ID,
+                    getIntent().getStringExtra(this.ARG_ITEM_ID));
+
+            //  todo - could use a more graceful default string
+            String title_string = getIntent().getStringExtra("Title");//arguments.getString("Title", "foo");
+
+            // fixme - hacky temporary to get the ball rollin'
+            // really should use fragments for better portability
+            TextView title = (TextView) findViewById(R.id.game_title);
+            title.setText(title_string);
+
+
+            //GameDetailTitleFragment fragment_title = new GameDetailTitleFragment();
+            //GameDetailTitleFragment fragment_title2 = new GameDetailTitleFragment();
+            //GameDetailJoinListFragment fragment_join_list = new GameDetailJoinListFragment();
+
+            //fragment_title.setArguments(arguments);
+            //fragment_title2.setArguments(arguments);
+            //fragment_join_list.setArguments(arguments);
+
+            //FragmentTransaction transaction = getFragmentManager().beginTransaction();
+
+            //transaction.add(R.id.game_detail_container_title, fragment_title, "first");
+            //transaction.add(R.id.game_detail_container_title, fragment_title2, "second");
+
+            //transaction.add(R.id.game_detail_container, fragment_join_list);
+
+            //transaction.commit();
         }
     }
 

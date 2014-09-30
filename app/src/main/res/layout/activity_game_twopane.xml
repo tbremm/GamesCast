@@ -30,7 +30,7 @@
         tools:layout="@android:layout/list_content" />
 
     <FrameLayout
-        android:id="@+id/game_detail_container"
+        android:id="@+id/game_detail_container_title"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="3" />

@@ -1,7 +1,32 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/game_detail_container"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.adventurpriseme.gamescast.GameDetailActivity"
-    tools:ignore="MergeRootFrame" />
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+    <TextView
+        android:id="@+id/game_title"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"></TextView>
+
+
+    <!--
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/game_detail_container_title"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        tools:context="com.adventurpriseme.gamescast.GameDetailActivity"
+        tools:ignore="MergeRootFrame" />
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/game_detail_container_list"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/game_detail_container_title"
+        tools:context="com.adventurpriseme.gamescast.GameDetailActivity"
+        tools:ignore="MergeRootFrame" />
+    -->
+
+</RelativeLayout>

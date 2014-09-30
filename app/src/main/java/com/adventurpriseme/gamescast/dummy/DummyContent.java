@@ -27,7 +27,7 @@ public class DummyContent {
         // Add 3 sample items.
         addItem(new DummyItem("1", "Trivia"));
         addItem(new DummyItem("2", "Poker"));
-        addItem(new DummyItem("3", "Checkers"));
+        addItem(new DummyItem("3", "Sorry!"));
     }
 
     private static void addItem(DummyItem item) {
