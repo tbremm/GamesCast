@@ -34,11 +34,12 @@
     <string name="ok">OK</string>
     <string name="game_over">Game Over</string>
     <string name="select_device_text">Select device to start the game.</string>
-    <string name="join_game">Join the Game</string>
+    <string name="join_game">Join Game</string>
     <string name="title_activity_cast_hello_world">CastHelloWorld</string>
     <string name="app_id">21857AF0</string>
     <string name="message_to_cast">tbHelloWorld!</string>
     <string name="instructions">These are test instructions...</string>
     <string name="namespace">com.adventurpriseme.gamescast.castHelloWorld</string>
+    <string name="title_activity_rps">RPSActivity</string>
 
 </resources>

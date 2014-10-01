@@ -24,10 +24,11 @@ public class DummyContent {
     public static Map<String, DummyItem> ITEM_MAP = new HashMap<String, DummyItem>();
 
     static {
-        // Add 3 sample items.
-        addItem(new DummyItem("1", "Trivia"));
-        addItem(new DummyItem("2", "Poker"));
-        addItem(new DummyItem("3", "Sorry!"));
+        // Add 4 sample items.
+        addItem(new DummyItem("1", "RPS"));
+        addItem(new DummyItem("2", "Trivia"));
+        addItem(new DummyItem("3", "Poker"));
+        addItem(new DummyItem("4", "Sorry!"));
     }
 
     private static void addItem(DummyItem item) {

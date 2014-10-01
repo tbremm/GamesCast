@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.support.v4.app.NavUtils;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.adventurpriseme.gamescast.dummy.DummyContent;
@@ -56,6 +58,18 @@ public class GameDetailActivity extends Activity {
             // really should use fragments for better portability
             TextView title = (TextView) findViewById(R.id.game_title);
             title.setText(title_string);
+
+            Button button = (Button) findViewById(R.id.join_game_button);
+
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(GameDetailActivity.this, RPSActivity.class);
+                    startActivity(intent);
+                }
+            });
+
+
 
 
             //GameDetailTitleFragment fragment_title = new GameDetailTitleFragment();
